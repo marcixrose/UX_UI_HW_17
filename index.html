@@ -29,13 +29,11 @@
                     Working for myself presented unique challenges that required me to adapt quickly and learn new skills in order to succeed. 
                     UX combines my desire to be creative with solving real-world problems. 
                     I aspire for my design skills to one day contribute to positive change in the world!</p>
-                    <br>
-                    <button class="buttonResume">Download Resume</button>
             </div>
         </section>
 
         <section class="casestudies">
-            <div class="casestudies">
+            <div id="casestudies">
                 <img src="images\card-mockup.png" class="imgcasestudy">
                 <img src="images\card-mockup.png" class="imgcasestudy">
                 <img src="images\card-mockup.png" class="imgcasestudy">
@@ -51,23 +49,67 @@
             </p>
             </div>
 
-            <button class="accordion">HTML, CSS, Javascript</button>
+            <button class="accordion">HTML, CSS, Java</button>
             <div class="panel">
             <p>Learning to code has been a goal of mine for a long time. Teenage me 
                 would be so proud.
             </p>
             </div>
 
-            <button class="accordion">Entrepreneurship</button>
+            <button class="accordion">Storytelling + Persona Development</button>
+            <div class="panel">
+             <p>I really enjoy the storytelling process of design. Discovering the needs
+                of the users and the journey they take is interesting to me. I love putting
+                myself in their shoes to tell their story.
+             </p>
+            </div>
+            <button class="accordion">Time Management + Project Planning</button>
+            <div class="panel">
+             <p>Working for myself required very strong time management skills. Scheduling clients
+                and maintaining a consistent workflow was imperative. Being the only employee
+                meant I was also responsible for new projects and timely rollouts of new
+                services.
+             </p>
+            </div>
+            <button class="accordion">Adaptability + Desire to Learn</button>
             <div class="panel">
              <p>My solo-esthetics business has been growing steadily since I began in 2021.
                 I am thankful for the skills I have acquired as a small-business owner, wearing
                 all the hats means you have to learn fast!
              </p>
             </div>
-            
-        </section>
 
+            <style>
+                .panel {
+                  padding: 0 18px;
+                  background-color: #F3EDFF;
+                  width: 300px;
+                  max-height: 0;
+                  margin-left: auto;
+                  margin-right: auto;
+                  overflow: hidden;
+                  transition: max-height 0.2s ease-out;
+                }
+                </style>
+                
+                <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                      panel.style.maxHeight = null;
+                    } else {
+                      panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                  });
+                }
+                </script>
+
+        </section>
         <footer>
                 <ul> 
                     <li class="inline-block"> About</li>
