@@ -1,17 +1,32 @@
+@font-face {
+    font-family: "PeanutDonutsRegular", Arial, Helvetica, sans-serif;
+    src: url("fonts\peanut-donuts.ttf") format("truetype");
+  }
+  
+h1 {
+    font-family: "PeanutDonutsRegular", Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: #343434;
+}
+
+p {
+    font-family: 'open sans-serif', arial, sans-serif;
+    font-size: 14px;
+}
+
 body {
     background-color: #F3EDFF;
 }
 
 header {
-    background-color: #C6B5E9;
+    display: flex;
     width: 100%;
-    height: 250px;
+    height: 100%;
     position: relative;
-    padding-top: 25px;
-}
+  }
+  
 
 footer {
-    background-color: #C6B5E9;
     width: 100%;
     height: 250px;
     margin-top: 30%;
@@ -19,32 +34,71 @@ footer {
     padding-top: 125px;
 }
 
-.inline-block {
-    display: inline-flex;
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     padding: 10px;
-    width: auto;
-    flex-wrap: nowrap;
 }
 
-.logo {
-    width: 43%;
-    padding: 1%;
+.inline-block {
     display: flex;
-    justify-content: left;
-    flex-wrap: nowrap;
-}
-
-nav {
-    width: 83%;
-    padding: 1%;
-    display: flex;
+    background-image: url('images/header.png');
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-attachment: fixed;
+    margin: auto;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    align-items: center;
     justify-content: center;
 }
 
-ul {
-    width: 100%;
+.inline-block-footer {
+    display: flex;
+    background-image: url('images/footer.png');
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    background-attachment: relative;
     margin: auto;
-    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 250px !important;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+nav {
+    display: flex;
+    font-family: 'open sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ul {
+    display: flex;
+    font-family: 'open sans', arial, sans-serif;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -52,6 +106,18 @@ ul {
     flex-direction: row;
     margin-top: 50px;
     margin-bottom: auto;
+}
+
+.skillsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectsHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero {
